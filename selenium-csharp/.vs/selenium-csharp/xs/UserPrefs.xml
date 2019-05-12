@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E153F705-A768-4708-AAE9-4048586DC1A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.selenium-csharp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="selenium-csharp/packages.config">
+    <Files>
+      <File FileName="selenium-csharp/Program.cs" Line="1" Column="1" />
+      <File FileName="selenium-csharp/packages.config" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="selenium-csharp" expanded="True">
+            <Node name="selenium-csharp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="packages.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
