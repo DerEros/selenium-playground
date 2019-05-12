@@ -1,0 +1,29 @@
+{
+  "name": "selenium-js",
+  "version": "1.0.0",
+  "description": "Playground project to try Selenium in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerEros/selenium-playground.git"
+  },
+  "keywords": [
+    "Selenium",
+    "Playground",
+    "Javascript"
+  ],
+  "author": "DerEros",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DerEros/selenium-playground/issues"
+  },
+  "homepage": "https://github.com/DerEros/selenium-playground#readme",
+  "devDependencies": {
+    "chromedriver": "^74.0.0",
+    "mocha": "^6.1.4",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
