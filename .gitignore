@@ -16,3 +16,6 @@ bin/
 obj/Debug/
 obj/Release/
 System.*
+
+# JS files
+node_modules/
