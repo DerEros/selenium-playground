@@ -12,6 +12,6 @@ Experimenting with Selenium UI testing on different programming languages.
 - [x] Selenium Javascript
   - [x] Set up build infrastructure
   - [x] Fire up browser
-  - [ ] Log into some website
+  - [x] Log into some website
   - [x] Wrap test into a testing framework
-  - [ ] Add a negative test
+  - [x] Add a negative test

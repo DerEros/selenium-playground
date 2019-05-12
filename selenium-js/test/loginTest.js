@@ -22,34 +22,53 @@ describe('Login', function() {
             .forBrowser('chrome')
             .build();
 
+        driver.manage().setTimeouts({ implicit: 10000 });
     });
 
     after(() => driver && driver.quit());
+
+    async function executeLogin(username, password) {
+        let userField = await driver.findElement(By.id("username"));
+        let passwordField = await driver.findElement(By.id("password"));
+        let submitButton = await driver.findElement(By.id("loginbtn"));
+
+        await userField.sendKeys(username);
+        await passwordField.sendKeys(password);
+        await submitButton.click();
+    }
+
+    async function logout() {
+        let userLink = await driver.findElement(By.id("dropdown-1"));
+        await userLink.click();
+
+        let logoutLink = await driver.findElement(By.id("actionmenuaction-6"));
+        await logoutLink.click();
+    }
 
     it('should succeed with correct credentials', async function() {
         // without higher timeout Mocha will abort tests that run longer than 2s
         this.timeout(20000);
 
-        driver.manage().setTimeouts({ implicit: 10000 });
         await driver.get(loginPage)
-
-        let userField = await driver.findElement(By.id("username"));
-        let passwordField = await driver.findElement(By.id("password"));
-        let submitButton = await driver.findElement(By.id("loginbtn"));
-
-        await userField.sendKeys("admin");
-        await passwordField.sendKeys("sandbox");
-        await submitButton.click();
-
+        await executeLogin("admin", "sandbox");
 
         await driver.wait(until.elementLocated(By.className("usertext")));
         let username = await driver.findElement(By.className("usertext")).getText();
 
-        assert.equal("Admin Userr", username);
+        await logout();
+
+        assert.equal("Admin User", username);
     });
 
-    it('should fail with incorrect credentials', function() {
+    it('should fail with incorrect credentials', async function() {
         this.timeout(20000);
-        //assert.equal(false, true);
+
+        await driver.get(loginPage);
+        await executeLogin("foo", "bar");
+
+        await driver.wait(until.elementLocated(By.className("alert-danger")));
+        let errorMessage = await driver.findElement(By.className("alert-danger")).getText();
+
+        assert.equal("Invalid login, please try again", errorMessage);
     });
 });
