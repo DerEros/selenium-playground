@@ -11,7 +11,8 @@ Cargo.lock
 
 
 # C# Files
-/bin/
+bin/
 *.pdb
-obj/Debug
-obj/Release
+obj/Debug/
+obj/Release/
+System.*
