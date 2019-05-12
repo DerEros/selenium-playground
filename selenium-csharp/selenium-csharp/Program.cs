@@ -8,9 +8,9 @@ namespace selenium_csharp
     {
         static void Main(string[] args)
         {
-	    ChromeDriverService service = ChromeDriverService.CreateDefaultService(@"lib", "chromedriver");
-	    IWebDriver driver = new ChromeDriver(service);
-	    driver.Navigate().GoToUrl("http://google.com");
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService(@"lib", "chromedriver");
+            IWebDriver driver = new ChromeDriver(service);
+            driver.Navigate().GoToUrl("http://google.com");
         }
     }
 }
